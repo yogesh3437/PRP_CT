@@ -793,3 +793,10 @@ public class HomeController {
             authorities
         );
     }
+
+
+protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
+    }
+    
+        
